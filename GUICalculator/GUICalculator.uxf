@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>20</y>
+      <w>200</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>application::GUIManager
+--
+-root: BorderPane
+-textArea: TextArea
+-vBox: VBox
+-hBoxes: HBox[]
+-button0: Button
+-dotButton: Button
+-eraseButton: Button
+-resultButton: Button
+-button1: Button
+-button2: Button
+-button3: Button
+-addButton: Button
+-button4: Button
+-button5: Button
+-button6: Button
+-subButton: Button
+-button7: Button
+-button8: Button
+-button9: Button
+-mulButton: Button
+-clearButton: Button
+-bracketButton: Button
+-percentButton: Button
+-divButton: Button
+-bracketStack: Stack&lt;String&gt;
+--
++GUIManager(): ctor
+-setButtons(): void
++setGUI(): void
++setButtonEvent(): void
++getRoot(): BorderPane
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>450</y>
+      <w>300</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>application::ExpressionManager
+--
+-expression: String
+-infix: ArrayList&lt;String&gt;
+-postfix: ArrayList&lt;String&gt;
+--
++ExpressionManager(): ctor
++ExpressionManager(String expression): ctor
++setExpression(String expression): void
++getExpression(): String
++getInfix(): ArrayList&lt;String&gt;
++getPostfix(): ArrayList&lt;String&gt;
++expressionToPostfix(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>210</y>
+      <w>540</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>application::Utility
+--
+--
++isNumber(String s): boolean
++isFloatingPoint(String s): boolean
++isPercentage(String s): boolean
++isOperator(String s):&#13;
+boolean
++percentageToFloatingPoint(String s): String
++operationOrder(String op): &#13;int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>30</y>
+      <w>280</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>application::Calculator
+--
+-expressionManager: ExpressionManager
+--
++Calculator(): ctor
++Calculator(String expression): ctor
++setExpression(String expression): void
++calculate(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1270</x>
+      <y>220</y>
+      <w>220</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>application::Main
+--
+-guiManager: GUIManager
+--
++start(Stage primaryStage): void
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>160</y>
+      <w>30</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>110</y>
+      <w>670</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;650.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>270</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>150</y>
+      <w>350</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;330.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>430</y>
+      <w>350</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;150.0;330.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>890</x>
+      <y>290</y>
+      <w>80</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+</diagram>
